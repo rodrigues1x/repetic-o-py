@@ -1,13 +1,21 @@
-a = 80000
-b = 200000
+print("Insira a população da A:")
+a = int(input())
+print("Insira a população da B:")
+b = int(input())
+print("Insira o crescimento da A:")
+ca = float(input())
+while ca < 0:
+    print("Número inválido")
+    ca = float(input())
+print("Insira o crescimento da B:")
+cb = float(input())
+while cb < 0:
+    print("Número inválido")
+    cb = float(input())
 ano = 0
 
-populacao = input('digite a populaçao:')
-taxa = input('digite as taxas de crescimento iniciais:')
-
 while a <= b:
-    a += a * 0.03
-    b += b * 0.015
+    a += a * (ca / 100)
+    b += b * (cb / 100)
     ano += 1
-
-print('A passa ou fica igual a B em %d anos' %ano)
+print(ano)
